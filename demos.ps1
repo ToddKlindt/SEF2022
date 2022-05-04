@@ -25,7 +25,7 @@ Connect-SPOService -Url https://contoso-admin.sharepoint.com -Credentials $Crede
 
 # Find the Provisioning cmdlets
 Get-Command -Module pnp.powershell -Noun "*template*"
-  
+
 # Multiple versions of the same module
 Find-Module -Name pnp.powershell -AllVersions -AllowPrerelease
 Install-Module -RequiredVersion
@@ -149,7 +149,7 @@ while (! $a) {
         $a = Connect-PnPOnline -Url https://tenant.sharepoint.com/sites/foo -erroraction stop
     }
     catch {
-        Write-Warning   "No connection"
+        Write-Warning "No connection"
         Write-Warning "Waiting 30 seconds..."
         Start-Sleep -Seconds 30
        }   
