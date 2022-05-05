@@ -46,7 +46,7 @@ Add-PnPFile -Path '.\Boot fairs with Graphic design.docx' -Folder $folder
 Add-PnPFolder -Name "Folder 1" -Folder $folder
 Add-PnPFile -Path '.\Building materials licences to budget for Storytelling.docx'  -Folder '$folder\Folder 1'
 
-# Get all the files in all the documnet libraries
+# Get all the files in all the document libraries
 $docliblist = Get-PnPList -Includes DefaultViewUrl,IsSystemList | Where-Object -Property IsSystemList -EQ -Value $false | Where-Object -Property BaseType -EQ -Value "DocumentLibrary"
     Foreach ($doclib in $docliblist) 
         {
